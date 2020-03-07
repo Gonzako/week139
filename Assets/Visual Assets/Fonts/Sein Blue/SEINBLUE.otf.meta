@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: de62fe770e4097247bd49cfa238b21c4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SEIN BLUE
+  fontNames:
+  - SEIN BLUE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 992c7cfad503d434ba274c3f291fbfff, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
