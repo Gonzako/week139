@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 1546038574323746575}
   - component: {fileID: 8044267807029998913}
   - component: {fileID: 4891354116363821261}
+  - component: {fileID: 1546038574323746574}
   m_Layer: 9
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -317,6 +318,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxRotateAngle: 15
   minRotateAngle: 5
+--- !u!114 &1546038574323746574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546038573988443927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce2cdf210a7af2439495bceb75050fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 339bb1aa6dc7e1f479ecd54b83b3571d, type: 2}
+  behavsToDisable: []
 --- !u!1 &1546038574781755330
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1546038574781755331}
   m_Layer: 0
-  m_Name: PlayerHolder
+  m_Name: PlayerMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
