@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class HitResponse : MonoBehaviour
 {
 
-    public UnityAction onHitResponse;
+    public UnityEvent onHitResponse;
     private Mortal mort;
 
     private void OnEnable()

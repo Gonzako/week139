@@ -1816,68 +1816,16 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!1 &1215502088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1948596868, guid: 3cb7cca098cb875468822fd0feba1f30,
-    type: 3}
-  m_PrefabInstance: {fileID: 1546038574323746572}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1215502091 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1948596871, guid: 3cb7cca098cb875468822fd0feba1f30,
     type: 3}
   m_PrefabInstance: {fileID: 1546038574323746572}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215502088}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0476595b2bf044eaf844eeb4dc6706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1215502093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215502088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6781b467167175a45a272c3787c44109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeveloperDescription:
-    _value: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
-  _event: {fileID: 11400000, guid: 39e6c136232cb1e47af02ee83bf2ed36, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1215502094}
-        m_MethodName: sayHiToGO
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _debugValue: {fileID: 0}
---- !u!114 &1215502094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215502088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e17d0284f1e7ca24d863e190dd8a270e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1728735625
@@ -2175,6 +2123,45 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1546038574323746572}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2049754121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049754120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528132145535fa545947e68263d0f45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHitResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2133439402}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2049754122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049754120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98373d68a3b07c94697cbc83f45de00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HealthPoints: 1
 --- !u!114 &2049754125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,6 +2180,12 @@ MonoBehaviour:
   - {fileID: 1546038574323746579}
   - {fileID: 1215502091}
   defaultTimeToWait: 2
+--- !u!1 &2133439402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1546038574781755330, guid: 3cb7cca098cb875468822fd0feba1f30,
+    type: 3}
+  m_PrefabInstance: {fileID: 1546038574323746572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1546038574323746572
 PrefabInstance:
   m_ObjectHideFlags: 0
