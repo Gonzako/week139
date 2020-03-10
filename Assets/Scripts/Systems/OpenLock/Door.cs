@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour, IInteractable
 {
-    private bool isOpen;
+    [SerializeField] private bool isOpen;
 
     public delegate void DoorEvents(Door door);
     public DoorEvents onDoorOpened;
     public DoorEvents onDoorOpenFailed;
 
-    [SerializeField]private int _targetScene;
+    [SerializeField] private int _targetScene;
 
     private void SetDoorState(bool value)
     {
