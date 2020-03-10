@@ -331,7 +331,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventToListen: {fileID: 11400000, guid: 339bb1aa6dc7e1f479ecd54b83b3571d, type: 2}
-  behavsToDisable: []
+  behavsToDisable:
+  - {fileID: 8044267807029998913}
+  - {fileID: 339718174}
+  - {fileID: 4891354116363821261}
+  defaultTimeToWait: 2
 --- !u!1 &1546038574781755330
 GameObject:
   m_ObjectHideFlags: 0
