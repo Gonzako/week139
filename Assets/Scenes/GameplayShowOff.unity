@@ -2308,7 +2308,7 @@ PrefabInstance:
     - target: {fileID: 7382910254756636967, guid: c398a4dedf9b56246887bd278209231b,
         type: 3}
       propertyPath: m_Name
-      value: PlaceHolderMeeleeMaster (3)
+      value: PlaceHolderMeeleeMaster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c398a4dedf9b56246887bd278209231b, type: 3}
