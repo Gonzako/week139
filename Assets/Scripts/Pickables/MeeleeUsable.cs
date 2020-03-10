@@ -21,7 +21,7 @@ public class MeeleeUsable : DefaultUsable
     {
         base.onThrow(args1);
         var pickable = pickableGO.GetComponent<MeeleePickable>();
-        hitter.originPoint.position -= (Vector3)pickable.weaponPointOffset;
+        //hitter.originPoint.position -= (Vector3)pickable.weaponPointOffset;
         hitter.originPoint = null;
         
     }
@@ -31,6 +31,7 @@ public class MeeleeUsable : DefaultUsable
         base.onPlayerUse();
         if(cooldownTimer < Time.time)
         {
+            Debug.Log("attackCalled");
             StartCoroutine(attackTillActiveFrames());
         }
     }
@@ -41,6 +42,7 @@ public class MeeleeUsable : DefaultUsable
         cooldownTimer = Time.time + activeTime + cooldownTime;
         while(attackTimer > Time.time)
         {
+            Debug.Log("tried to Hitter");
             hitter.Attack();
             yield return null;
         }

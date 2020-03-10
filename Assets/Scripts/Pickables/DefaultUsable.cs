@@ -36,6 +36,7 @@ public class DefaultUsable : MonoBehaviour, IBaseUsable
 
     public virtual void onPlayerUse()
     {
+        Debug.LogFormat("Use called on {0}", gameObject.name);
         onThisUse?.Invoke(this.gameObject);
     }
 

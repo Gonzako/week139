@@ -19,7 +19,7 @@ public class MeeleePickable : DefaultPickable
         var usableGO = base.onPickup(caller);
         weapPoint = caller.GetComponent<IItemPicker>().WeaponPoint;
         originalLocal = weapPoint.localPosition;
-        weapPoint.localPosition += (Vector3)weaponPointOffset;
+        //weapPoint.localPosition += (Vector3)weaponPointOffset;
         hitter.originPoint = weapPoint;
         
         return usableGO;

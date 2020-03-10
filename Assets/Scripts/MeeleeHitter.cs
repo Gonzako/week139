@@ -31,6 +31,7 @@ public class MeeleeHitter : MonoBehaviour
         var result = Physics2D.OverlapBoxAll((Vector2)originPoint.position, attackBounds, transform.rotation.eulerAngles.z, enemies);
         if(result.Length > 0)
         {
+            Debug.LogFormat("Colided with {0}", result);
             foreach (Collider2D n in result)
             {
 
@@ -43,7 +44,11 @@ public class MeeleeHitter : MonoBehaviour
                         health.Damage(damage);
                         onThisHit(this.gameObject, health);
                         onAnyEnemyHit.Raise(n.gameObject);
-                    } 
+                    }
+                    else
+                    {
+                        Debug.LogFormat("Collided with {0} who does not have a health component", n.name);
+                    }
                 }
 
             }
@@ -59,8 +64,10 @@ public class MeeleeHitter : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        Gizmos.matrix = transform.localToWorldMatrix;
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(originPoint.position, attackBounds);
+        Gizmos.DrawWireCube(Vector3.zero, attackBounds*transform.localToWorldMatrix.inverse.lossyScale);
+
     }
 
 }
