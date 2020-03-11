@@ -23,7 +23,7 @@ public class UnawareState : BaseAIState
         if(_ai.GetComponent<AIScanner>()._visibleTargets.Count > 0)
         {
             return typeof(AgressiveState);
-        }else if(_ai.GetComponent<AIListener>()._audiblePosition.Count > 0)
+        }else if(_ai._listener.heardPlayer())
         {
             return typeof(AwareState);
         }

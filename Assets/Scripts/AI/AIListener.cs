@@ -5,18 +5,43 @@ using UnityEngine;
 
 public class AIListener : MonoBehaviour
 {
-    public List<Vector3> _audiblePosition =  new List<Vector3>();
+    private LinkedList<Vector2> _audiblePosition = new LinkedList<Vector2>();
+    private float _refreshTime = 5.0F;
 
-    public delegate void AIListenerEvents(GameObject actor);
-    public AIListenerEvents onAlertableActionDone;
-
-    private void OnDisable()
+    private void Start()
     {
-        
+        foreach (AiAttentionCaller caller in AiCallerTracker.instance.attentionCallers)
+        {
+            caller.onMakeNoise += newPosition;
+        }
+
+        StartCoroutine(refreshPositions());
     }
 
-    private void OnEnable()
+    private void newPosition(GameObject guy)
     {
-        
+        _audiblePosition.AddFirst(guy.transform.position);
+    }
+
+    public Vector2 getMostRecentPosition()
+    {
+        Vector2 rs = _audiblePosition.First.Value;
+        return rs;
+    }
+
+
+    private IEnumerator refreshPositions()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(_refreshTime);
+            if(_audiblePosition.Last != null)
+            _audiblePosition.RemoveLast();
+        }
+    }
+
+    public bool heardPlayer()
+    {
+        return (_audiblePosition.Count > 0);
     }
 }

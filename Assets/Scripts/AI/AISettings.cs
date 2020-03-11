@@ -21,6 +21,9 @@ public class AISettings
     [Tooltip("Maximum distance that the AI will listen to gunshots")]
     [SerializeField] public float listenDistance = 0.5f;
 
+    [Tooltip("Maximum time for ai to wait until giving up with searching the player")]
+    [SerializeField] public float searchWaitTime;
+
 
 
 
