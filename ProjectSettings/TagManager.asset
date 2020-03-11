@@ -20,11 +20,12 @@ TagManager:
   - 
   - 
   - 
+  - Pickables
+  - Throwables
+  - Bullets
+
   - 
-  - 
-  - 
-  - 
-  - 
+  - AISoundDetec
   - 
   - 
   - 

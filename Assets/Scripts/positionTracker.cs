@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class positionTracker : MonoBehaviour
 {
+
     public Transform objToFollow;
 
     private void LateUpdate()

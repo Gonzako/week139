@@ -23,6 +23,7 @@ public class Mortal : MonoBehaviour, IMortal
         _HealthPoints = _MaxHealth;
     }
 
+
     public void Damage(int amount)
     {
         onHit?.Invoke(amount, _HealthPoints, _MaxHealth);
