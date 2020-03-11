@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AwareState : BaseAIState
 {
-   public override AIManager _ai { get; set; }
+    public override AIManager _ai { get; set; }
 
     public AwareState(AIManager ai) : base(ai)
     {
@@ -14,7 +14,8 @@ public class AwareState : BaseAIState
 
     public override void OnStateEnter()
     {
-    
+
+         
 
     }
     public override Type Tick()

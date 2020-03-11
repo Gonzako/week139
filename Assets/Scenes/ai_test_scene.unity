@@ -1015,44 +1015,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1737033273 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7201959102775436697, guid: 4b9c3c03d1a3a7f4ebdca9164a65e4f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1801488893}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1737033274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737033273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98373d68a3b07c94697cbc83f45de00d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _HealthPoints: 100
 --- !u!4 &1737033281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7201959102775436676, guid: 4b9c3c03d1a3a7f4ebdca9164a65e4f7,
     type: 3}
   m_PrefabInstance: {fileID: 1801488893}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1737033282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737033273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f236d0ea9153d4e4b828341e4b8e00d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hpbar: {fileID: 1402003342}
 --- !u!1 &1738640633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1103,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1737033274}
+      - m_Target: {fileID: 0}
         m_MethodName: Damage
         m_Mode: 3
         m_Arguments:
