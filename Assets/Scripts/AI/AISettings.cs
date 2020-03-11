@@ -18,7 +18,11 @@ public class AISettings
     [SerializeField] public List<Transform> _patrolPoints;
     [Tooltip("Amount of time that ai takes between waypoint patrols")]
     [SerializeField] public float wayPointRestTimer = 2F;
+    [Tooltip("Maximum distance that the AI will listen to gunshots")]
+    [SerializeField] public float listenDistance = 0.5f;
 
+    [Tooltip("Maximum time for ai to wait until giving up with searching the player")]
+    [SerializeField] public float searchWaitTime;
 
 
 

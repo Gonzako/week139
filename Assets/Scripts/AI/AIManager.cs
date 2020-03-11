@@ -25,12 +25,18 @@ public class AIManager : MonoBehaviour
 
     public AISettings _settings;
 
+    public AIListener _listener;
+
+    public bool canSearch = true;
+
     private void Start()
     {
         SetupStates();
 
         _rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
+        _listener = GetComponent<AIListener>();
+
     }
 
     private void SetupStates()
@@ -160,14 +166,32 @@ public class AIManager : MonoBehaviour
         }
     }
 
-    IEnumerator Search()
+    public IEnumerator Search()
     {
-        while (true)
+        while (canSearch)
         {
-            SetDestination(RandomPosition());
-            yield return new WaitUntil(() => reachedEndOfPath);
-            yield return new WaitForSeconds(2F);
+            if (_listener.heardPlayer())
+            {
+                SetDestination(_listener.getMostRecentPosition());
+                yield return new WaitUntil(() => reachedEndOfPath);
+                yield return new WaitForSeconds(2F);
+            }
+            else
+            {
+                SetDestination(RandomPosition());
+                yield return new WaitUntil(() => reachedEndOfPath);
+                yield return new WaitForSeconds(5F);
+                
+            }
         }
+    }
+
+
+   public IEnumerator Wait()
+    {
+        canSearch = true;
+        yield return new WaitForSeconds(_settings.searchWaitTime);
+        canSearch = false;
     }
 }
     

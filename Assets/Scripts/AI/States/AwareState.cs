@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AwareState : BaseAIState
 {
-   public override AIManager _ai { get; set; }
+    public override AIManager _ai { get; set; }
 
     public AwareState(AIManager ai) : base(ai)
     {
@@ -14,18 +14,19 @@ public class AwareState : BaseAIState
 
     public override void OnStateEnter()
     {
-    
+        _ai.StopAllCoroutines();
+        _ai.StartCoroutine(_ai.Search());
+        _ai.StartCoroutine(_ai.Wait());
 
     }
     public override Type Tick()
     {
-        if (Vector2.Distance(_ai.transform.position, _ai._Player.transform.position) < 1F)
+        if (!_ai.canSearch)
         {
-            return null;
+            return typeof(UnawareState);
         }
         else
         {
-
             return null;
         }
     }
