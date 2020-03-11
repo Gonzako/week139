@@ -211,6 +211,9 @@ GameObject:
   - component: {fileID: 8044267807029998913}
   - component: {fileID: 4891354116363821261}
   - component: {fileID: 1546038574323746574}
+  - component: {fileID: 2049754121}
+  - component: {fileID: 2049754122}
+  - component: {fileID: 2049754125}
   m_Layer: 9
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -254,7 +257,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &339718174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +338,63 @@ MonoBehaviour:
   - {fileID: 8044267807029998913}
   - {fileID: 339718174}
   - {fileID: 4891354116363821261}
+  defaultTimeToWait: 2
+--- !u!114 &2049754121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546038573988443927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528132145535fa545947e68263d0f45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHitResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1546038574781755330}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2049754122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546038573988443927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98373d68a3b07c94697cbc83f45de00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HealthPoints: 1
+--- !u!114 &2049754125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546038573988443927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce2cdf210a7af2439495bceb75050fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: e44cae584d3168a48b26c156e2163a64, type: 2}
+  behavsToDisable:
+  - {fileID: 8044267807029998913}
+  - {fileID: 339718174}
+  - {fileID: 1948596871}
   defaultTimeToWait: 2
 --- !u!1 &1546038574781755330
 GameObject:

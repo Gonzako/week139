@@ -8,9 +8,9 @@ using UnityEngine.Events;
 public class UsableResponses : MonoBehaviour
 {
 
-    public UnityEvent<GameObject> onHitResponse;
-    public UnityEvent<GameObject> onThrowResponse;
-    public UnityEvent<GameObject> onDeequipResponse;
+    public UnityEvent onUseResponse;
+    public UnityEvent onThrowResponse;
+    public UnityEvent onDeequipResponse;
     private DefaultUsable mort;
 
     private void OnEnable()
@@ -31,17 +31,17 @@ public class UsableResponses : MonoBehaviour
 
     private void throwResponse(GameObject obj)
     {
-        onThrowResponse.Invoke(obj);
+        onThrowResponse.Invoke();
     }
 
     private void callResponse(GameObject args)
     {
-        onHitResponse.Invoke(args);
+        onUseResponse.Invoke();
     }
 
     private void dequipResponse(GameObject args)
     {
-        onDeequipResponse.Invoke(args);
+        onDeequipResponse.Invoke();
     }
 
     private void OnDisable()

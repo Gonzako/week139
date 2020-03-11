@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 3102945807642624580}
   - component: {fileID: 1518369214900056039}
   - component: {fileID: 5250209161053738903}
+  - component: {fileID: 151101512}
   m_Layer: 0
   m_Name: PlaceHolderMeeleeUsable
   m_TagString: Untagged
@@ -428,3 +429,24 @@ MonoBehaviour:
   originPoint: {fileID: 0}
   onAnyEnemyHit: {fileID: 11400000, guid: ce245e9a631a9b043b5c4e47fd68cd45, type: 2}
   attackBounds: {x: 0.93, y: 0.55}
+--- !u!114 &151101512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172413621010003325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7624f4cfac1c56749a55684dc6a59588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onUseResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  onThrowResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeequipResponse:
+    m_PersistentCalls:
+      m_Calls: []

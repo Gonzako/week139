@@ -42,6 +42,7 @@ public class DefaultUsable : MonoBehaviour, IBaseUsable
 
     public virtual void onThrow(Transform firePoint)
     {
+        onThisThrow?.Invoke(this.gameObject);
         throwGO.transform.position = firePoint.position;
         throwGO.transform.rotation = firePoint.rotation;
         gameObject.SetActive(false);
@@ -50,7 +51,7 @@ public class DefaultUsable : MonoBehaviour, IBaseUsable
         rb.angularVelocity = UnityEngine.Random.value * 10 % 2 == 0 ? onThrowVelTorgue.y : -onThrowVelTorgue.y;
         rb.velocity = firePoint.right * onThrowVelTorgue.x;
         throwGO.GetComponent<throwableStateTracker>().goToThrowable();
-        onThisThrow?.Invoke(this.gameObject);
+
     }
 
     // Start is called before the first frame update
