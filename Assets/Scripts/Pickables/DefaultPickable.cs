@@ -12,15 +12,15 @@ public class DefaultPickable : MonoBehaviour, BasePickable
 
 
     [SerializeField]
-    DefaultUsable usableGO;
+    protected DefaultUsable usableGO;
 
 
-    public void onHighlight()
+    public virtual void onHighlight(GameObject caller)
     {
         throw new System.NotImplementedException();
     }
 
-    public GameObject onPickup()
+    public virtual GameObject onPickup(GameObject caller)
     {
         gameObject.SetActive(false);
         usableGO.gameObject.SetActive(true);
@@ -28,16 +28,4 @@ public class DefaultPickable : MonoBehaviour, BasePickable
         return usableGO.gameObject;
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

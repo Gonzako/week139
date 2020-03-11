@@ -17,9 +17,9 @@ public class DefaultUsable : MonoBehaviour, IBaseUsable
     float leaveVel = 1;
     
     [SerializeField, Tooltip("X is throw speed, Y is rotation force")]
-    Vector2 onThrowVelTorgue = Vector2.one*Mathf.Deg2Rad;
+    Vector2 onThrowVelTorgue = Vector2.one*20;
 
-    public void onDeEquip(Transform oldParent)
+    public virtual void onDeEquip(Transform oldParent)
     {
         transform.SetParent(oldParent, true);
         pickableGO.transform.position = this.transform.position;
@@ -31,23 +31,25 @@ public class DefaultUsable : MonoBehaviour, IBaseUsable
         var rot = transform.rotation.eulerAngles;
         rot.z = 0;
         transform.rotation = Quaternion.Euler(rot);
-
+        onThisDeEquip?.Invoke(gameObject);
     }
 
-    public void onPlayerUse()
+    public virtual void onPlayerUse()
     {
-        throw new System.NotImplementedException();
+        Debug.LogFormat("Use called on {0}", gameObject.name);
+        onThisUse?.Invoke(this.gameObject);
     }
 
-    public void onThrow(Transform args1)
+    public virtual void onThrow(Transform firePoint)
     {
-        throwGO.transform.position = args1.position;
-        throwGO.transform.rotation = args1.rotation;
+        onThisThrow?.Invoke(this.gameObject);
+        throwGO.transform.position = firePoint.position;
+        throwGO.transform.rotation = firePoint.rotation;
         gameObject.SetActive(false);
         throwGO.SetActive(true);
         var rb = throwGO.GetComponent<Rigidbody2D>();
         rb.angularVelocity = UnityEngine.Random.value * 10 % 2 == 0 ? onThrowVelTorgue.y : -onThrowVelTorgue.y;
-        rb.velocity = args1.right * onThrowVelTorgue.x;
+        rb.velocity = firePoint.right * onThrowVelTorgue.x;
         throwGO.GetComponent<throwableStateTracker>().goToThrowable();
 
     }

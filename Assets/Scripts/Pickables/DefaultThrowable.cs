@@ -5,7 +5,7 @@ using UnityEngine;
 public class DefaultThrowable : MonoBehaviour, IBaseThrowable
 {
     public GameObject pickableGO;
-    public int enemyLayerIndx = 10;
+    public LayerMask enemyLayers;
     public float timeToBackToPickable;
 
     private Coroutine back2pickCor;
@@ -13,6 +13,7 @@ public class DefaultThrowable : MonoBehaviour, IBaseThrowable
     private bool firstCol = false;
     private throwableStateTracker stateTracker;
 
+    
     public void launchSelf(Vector2 velocity)
     {
         throw new System.NotImplementedException();
@@ -27,11 +28,10 @@ public class DefaultThrowable : MonoBehaviour, IBaseThrowable
         back2pickCor = StartCoroutine(turnSelfIntoPickabble(timeToBackToPickable));
     }
 
-    void Start()
+    protected virtual void Awake()
     {
         stateTracker = GetComponent<throwableStateTracker>();
         this.enabled = false;
-        Debug.Log(string.Format("Throwable {0} started checking for enemies in layer {1}", gameObject.name ,LayerMask.LayerToName(enemyLayerIndx)));
     }
 
 
@@ -43,20 +43,33 @@ public class DefaultThrowable : MonoBehaviour, IBaseThrowable
 
     IEnumerator turnSelfIntoPickabble(float time)
     {
-        yield return new WaitForSeconds(time);
-        backToPick();
+        if (firstCol)
+        {
+            yield return new WaitForSeconds(time);
+            backToPick(); 
+        }
     }
 
     void OnCollisionEnter2D(Collision2D otherCol)
     {
-        if(otherCol.gameObject.layer == enemyLayerIndx && firstCol)
+        if (this.enabled)
         {
-            
-            //Hitting enemy with throwable code here
-        }
-        firstCol = false;
-        
+            Debug.LogFormat("Collided with {0}", otherCol.gameObject.name);
+            if ((enemyLayers.value & 1 << otherCol.gameObject.layer) > 0  && firstCol)
+            {
+                Debug.LogFormat("Hit with {0}", otherCol.gameObject.name);
+                var isAi = otherCol.gameObject.GetComponent<aiKnockBacker>();
+                if(isAi != null)
+                {
+                    isAi.turnIntoDinamic(this.gameObject);
+                }
+                //Hitting enemy with throwable code here
+            }
 
-        back2pickCor = StartCoroutine(turnSelfIntoPickabble(0.1f));
+            back2pickCor = StartCoroutine(turnSelfIntoPickabble(0.1f));
+            firstCol = false;
+
+
+        }
     }
 }

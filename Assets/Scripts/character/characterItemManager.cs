@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
-using System;
 
-public class characterItemManager : MonoBehaviour
+
+public class characterItemManager : MonoBehaviour, IItemPicker
 {
     /// <summary>
     /// Callback mostly for UI prompting
@@ -23,8 +24,10 @@ public class characterItemManager : MonoBehaviour
 
     public GameObjectGameEvent onAnyThrow;
 
+    public GameObjectGameEvent onAnyUse;
+
     [SerializeField]
-    Transform weaponPoint;
+    public Transform weaponPoint;
 
     [SerializeField]
     int pickableLayerIndex;
@@ -36,6 +39,8 @@ public class characterItemManager : MonoBehaviour
     private Transform currentItemOldParent;
     //nearest stack like behaviour with remove functionality
     LinkedList<DefaultPickable> pickList = new LinkedList<DefaultPickable>();
+
+    public Transform WeaponPoint => weaponPoint;
 
     #region UnityAPI
     void Start()
@@ -49,6 +54,13 @@ public class characterItemManager : MonoBehaviour
         if (Input.GetButtonDown("Interact"))
         {
             PickupCurrentShown();
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (currentState == 0)
+                PickupCurrentShown();
+            else
+                UseCurrentItem();
         }
         if (Input.GetButtonDown("Fire2"))
         {
@@ -118,7 +130,7 @@ public class characterItemManager : MonoBehaviour
         }
         if (pickList.Count != 0)
         {
-            var selectedItem = pickList.First.Value.onPickup();
+            var selectedItem = pickList.First.Value.onPickup(this.gameObject);
             currentItemOldParent = selectedItem.transform.parent;
             selectedItem.transform.SetParent(weaponPoint, false);
             selectedItem.transform.localPosition = Vector3.zero;
@@ -141,6 +153,14 @@ public class characterItemManager : MonoBehaviour
             currentState = 0;
         }    
     }
+
+
+    private void UseCurrentItem()
+    {
+        onAnyUse.Raise(currentItem.gameObject);
+        currentItem.onPlayerUse();
+    }
+
     #endregion
 }
 

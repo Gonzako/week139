@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface BasePickable
 {
-    void onHighlight();
-    GameObject onPickup();
+    void onHighlight(GameObject caller);
+    GameObject onPickup(GameObject caller);
 
 }
