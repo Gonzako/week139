@@ -387,7 +387,7 @@ MonoBehaviour:
   pickableGO: {fileID: 3418067806147305756}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1280
   timeToBackToPickable: 5
 --- !u!1 &3418067806379635741
 GameObject:
