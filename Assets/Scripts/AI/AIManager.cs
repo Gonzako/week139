@@ -16,6 +16,7 @@ public class AIManager : MonoBehaviour
     public Rigidbody2D _rb;
 
     public Path path;
+    public Vector3 velocity;
 
     public float nextWaypointDistance = 3;
     private int currentWaypoint = 0;
@@ -87,7 +88,7 @@ public class AIManager : MonoBehaviour
             var speedFactor = reachedEndOfPath ? Mathf.Sqrt(distanceToWaypoint / nextWaypointDistance) : 1f;
             Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
 
-            Vector3 velocity = dir * _settings._movementSpeed * speedFactor;
+            velocity = dir * _settings._movementSpeed * speedFactor;
             transform.position += velocity * Time.deltaTime;
         }
      
