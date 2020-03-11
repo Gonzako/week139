@@ -54,9 +54,15 @@ public class DefaultThrowable : MonoBehaviour, IBaseThrowable
     {
         if (this.enabled)
         {
+            Debug.LogFormat("Collided with {0}", otherCol.gameObject.name);
             if ((enemyLayers.value & 1 << otherCol.gameObject.layer) > 0  && firstCol)
             {
-
+                Debug.LogFormat("Hit with {0}", otherCol.gameObject.name);
+                var isAi = otherCol.gameObject.GetComponent<aiKnockBacker>();
+                if(isAi != null)
+                {
+                    isAi.turnIntoDinamic(this.gameObject);
+                }
                 //Hitting enemy with throwable code here
             }
 

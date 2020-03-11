@@ -262,7 +262,7 @@ MonoBehaviour:
   pickableGO: {fileID: 2097992166058299607}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1280
   timeToBackToPickable: 5
 --- !u!114 &1279500272538229024
 MonoBehaviour:
@@ -553,7 +553,7 @@ MonoBehaviour:
   damage: 0
   enemies:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 256
   originPoint: {fileID: 0}
   onAnyEnemyHit: {fileID: 11400000, guid: ce245e9a631a9b043b5c4e47fd68cd45, type: 2}
   attackBounds: {x: 0.93, y: 0.55}
