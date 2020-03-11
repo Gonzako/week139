@@ -324,7 +324,7 @@ MonoBehaviour:
   throwGO: {fileID: 2581847706056819500}
   leaveVel: 1
   onThrowVelTorgue: {x: 20, y: 200}
-  bulletPrefab: {fileID: 7382910254756636967, guid: c398a4dedf9b56246887bd278209231b,
+  bulletPrefab: {fileID: 4878243921169887947, guid: c4489dba1d163fe49aaa065ebcc2d20a,
     type: 3}
   firingPoint: {fileID: 4524147356849108009}
   bulletParent: {fileID: 7535038423087964047}

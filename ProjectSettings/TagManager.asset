@@ -23,7 +23,7 @@ TagManager:
   - Pickables
   - Throwables
   - Bullets
-  - 
+  - EnemyBullet
   - AISoundDetec
   - 
   - 
