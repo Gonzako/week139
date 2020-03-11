@@ -1,0 +1,1 @@
+alarm can apply on top walls, and top door
