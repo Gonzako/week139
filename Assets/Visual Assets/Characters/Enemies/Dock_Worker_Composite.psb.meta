@@ -684,7 +684,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -41, y: 263}
-  - name: Dock_Worker_Concept_1
+  - name: Dock_Worker_Right_Arm
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1564,8 +1564,8 @@ ScriptedImporter:
     spriteID: 4e62b63912665934ca6591c9c87d6600
     layerID: 7
     mosaicPosition: {x: 4, y: 304}
-  - name: Dock_Worker_Concept
-    spriteName: Dock_Worker_Concept_1
+  - name: Dock_Worker_Right_Arm
+    spriteName: Dock_Worker_Right_Arm
     isGroup: 0
     parentIndex: -1
     spriteID: d3ad6357f25c3c14ea99599d5056a9b3
