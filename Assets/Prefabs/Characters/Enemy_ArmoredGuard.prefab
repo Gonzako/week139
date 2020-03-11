@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6267032228038205033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183102980631266176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b551f2844b054290f18a39bf892e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Solvers: []
+  m_Weight: 1
 --- !u!1001 &7479288059102756549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65,8 +79,14 @@ PrefabInstance:
     - target: {fileID: 316455693096877381, guid: ae751f48beddfd24e9f18a8fb2a09aaa,
         type: 3}
       propertyPath: m_Name
-      value: Armoured_Guard
+      value: Enemy_ArmoredGuard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 5004369514385410986, guid: ae751f48beddfd24e9f18a8fb2a09aaa,
     type: 3}
+--- !u!1 &7183102980631266176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 316455693096877381, guid: ae751f48beddfd24e9f18a8fb2a09aaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7479288059102756549}
+  m_PrefabAsset: {fileID: 0}

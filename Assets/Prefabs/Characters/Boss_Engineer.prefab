@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1751162552372901515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364250699539447775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b551f2844b054290f18a39bf892e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Solvers: []
+  m_Weight: 1
 --- !u!1001 &8699289399112654794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +24,7 @@ PrefabInstance:
     - target: {fileID: -3023553957683912683, guid: 9c3d2d1bda3994147add94ccfb0e466f,
         type: 3}
       propertyPath: m_Name
-      value: Engineer_Boss_Composite
+      value: Boss_Engineer
       objectReference: {fileID: 0}
     - target: {fileID: -2340658863173734210, guid: 9c3d2d1bda3994147add94ccfb0e466f,
         type: 3}
@@ -70,3 +84,9 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -4726664792159528644, guid: 9c3d2d1bda3994147add94ccfb0e466f,
     type: 3}
+--- !u!1 &3364250699539447775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3023553957683912683, guid: 9c3d2d1bda3994147add94ccfb0e466f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8699289399112654794}
+  m_PrefabAsset: {fileID: 0}

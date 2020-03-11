@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6798563226938947728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3414018092297208365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b551f2844b054290f18a39bf892e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Solvers: []
+  m_Weight: 1
 --- !u!1001 &2809685435699040673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +24,7 @@ PrefabInstance:
     - target: {fileID: -8530093286901165172, guid: f2a09479a9cc96d47896feb61f4c8355,
         type: 3}
       propertyPath: m_Name
-      value: Heavy_Guard_Composite
+      value: Enemy_HeavyGuard
       objectReference: {fileID: 0}
     - target: {fileID: -303123533957096715, guid: f2a09479a9cc96d47896feb61f4c8355,
         type: 3}
@@ -70,3 +84,9 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4657239368917188745, guid: f2a09479a9cc96d47896feb61f4c8355,
     type: 3}
+--- !u!1 &3414018092297208365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8530093286901165172, guid: f2a09479a9cc96d47896feb61f4c8355,
+    type: 3}
+  m_PrefabInstance: {fileID: 2809685435699040673}
+  m_PrefabAsset: {fileID: 0}
