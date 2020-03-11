@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Walls
+  - Enemy
+  - Obstacle
   - Player
-  - Enemies
   - 
   - 
   - 
@@ -23,6 +23,7 @@ TagManager:
   - Pickables
   - Throwables
   - Bullets
+
   - 
   - AISoundDetec
   - 

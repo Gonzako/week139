@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/door lock scene.unity
+    guid: ca557bbf29b3c7f4f9c29204be24e194
+  - enabled: 1
+    path: Assets/Scenes/ai_test_scene.unity
+    guid: 75bdae7acc0b5c54a96bbd32ff1ae8c6
   m_configObjects: {}
