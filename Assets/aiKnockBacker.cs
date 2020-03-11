@@ -12,6 +12,7 @@ public class aiKnockBacker : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        disabler = GetComponent<eventDisabler>();
     }
 
 
@@ -19,11 +20,11 @@ public class aiKnockBacker : MonoBehaviour
     {
         rb.isKinematic = false;
         disabler.OnEventRaised(timeToWait);
-        StartCoroutine(back2Dinamic(timeToWait));
         Vector2 direction = this.transform.position - caller.transform.position;
         direction = direction.normalized;
         rb.velocity = direction * velTorqueWhenThrownHit.x;
         rb.angularVelocity = Random.value * 10 % 2 == 0 ?  velTorqueWhenThrownHit.y : - velTorqueWhenThrownHit.y;
+        StartCoroutine(back2Dinamic(timeToWait));
     }
 
     IEnumerator back2Dinamic(float time)

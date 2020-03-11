@@ -36,6 +36,6 @@ public class eventDisabler : MonoBehaviour, IGameEventListener<float>
 
     private void Start()
     {
-        eventToListen.AddListener(this);
+        eventToListen?.AddListener(this);
     }
 }
