@@ -241,6 +241,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9c3c03d1a3a7f4ebdca9164a65e4f7, type: 3}
+--- !u!1 &286065707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7201959102775436697, guid: 4b9c3c03d1a3a7f4ebdca9164a65e4f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 286065706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &286065708
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286065707}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.042479277, y: 0.031859398}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91504145, y: 0.51148796}
+  m_EdgeRadius: 0
 --- !u!1 &373596714
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +436,7 @@ GameObject:
   - component: {fileID: 855328760}
   - component: {fileID: 855328759}
   - component: {fileID: 855328758}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2232,7 +2264,7 @@ PrefabInstance:
     - target: {fileID: 978740431043125305, guid: 71435d302a361ba4ba40da3ffa0dd82e,
         type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAAAQIezw6JOfhQIAAHcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1v2zAM/SuBzivgeE227rYlaboBbYNmQw9zD4pMx0JkydBHk7TIfx8pO7GTbYAB2+Qj+R5J6Z1J7WoQ3ti5lfm9yYF9GTD6Zh8GnfMOdnxt9FK+wRHzLHNfEohHzBP30qB9SGHOVOCtFF/1WhE4QWPQsjC2muVrmBjnHZoLrhygyxpP0RpN7wO2w9fVDYXs29A3eg8O+CVAe7A9XNrChmewoIXiVQ05Ee7Q6ahFp8MI0yilRVC8MEpJ1/Jgfl9HnU98TypzyVFTrE3YEuS69JSqH/hYFA58y9ry/VRabE2TkX0zTb8q7jYNp1euAtUYDdPIp0l6/5f/qqFbWFPdHesOE6rhSyk2yFBw53sN7Zun58SD3nK14SsFzyXoBzO3Jugcnd4GCg0O0mn3e5I2KUFsOntD9cIY6q7Xl/MjDYeofjdRslq1LvxdKhM7HUcOFmfyHenGhXAtCq3E4ZeDn3zd35zWcSut8+hqNWoitzLBEpTNYsdIS/ATYzXYfoYaNFd+v8A8/nKCF77/R91yOiRt9dZ33P2LkGju8Ely4VqYbTcrBz9CVS+M1H4J3Iqyl8+VZnsPrnwMXkkN3RTI8YBdnBitm+1z/whbBltw0QvzsPPBwpR7HvcfOeGS5P1Q7GiM0EEp2seogpL/RhX0vFCXS451VTSzB4PM0Hj2fqE9WAeZn285Gwt+kyQfExin12NMfpUApCtxPRTJ+HP+aTRi8RhIjT3natE0rR0VrpDutGhc+eM9NphbXseDl1u+ncu3yrgOKXVhlsIC6Mcmw0ksWCyCl0M+yyXKXIL3UsflY+8ZU0ZsIM9OibLY2NnOW551WTJWy1fjyZKxSby7MnZghz9QSwMEFAAACAgAABAh7IM0EQBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPWMzTQUVBKL0osyCgGihiCOKWZKSB2tJJZcqKlgYGxQaqZkYlZWmKyrkFqqlFSsolhsoGZRYq5qalSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAABAh7PDok5+FAgAAdwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABAh7IM0EQBtAAAAeAAAAAkAJAAAAAAAAAAAAAAA0gIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAACKAwAAAAA=
+      value: UEsDBBQAAAgIAAAIIezw6JOfhQIAAHcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1v2zAM/SuBzivgeE227rYlaboBbYNmQw9zD4pMx0JkydBHk7TIfx8pO7GTbYAB2+Qj+R5J6Z1J7WoQ3ti5lfm9yYF9GTD6Zh8GnfMOdnxt9FK+wRHzLHNfEohHzBP30qB9SGHOVOCtFF/1WhE4QWPQsjC2muVrmBjnHZoLrhygyxpP0RpN7wO2w9fVDYXs29A3eg8O+CVAe7A9XNrChmewoIXiVQ05Ee7Q6ahFp8MI0yilRVC8MEpJ1/Jgfl9HnU98TypzyVFTrE3YEuS69JSqH/hYFA58y9ry/VRabE2TkX0zTb8q7jYNp1euAtUYDdPIp0l6/5f/qqFbWFPdHesOE6rhSyk2yFBw53sN7Zun58SD3nK14SsFzyXoBzO3Jugcnd4GCg0O0mn3e5I2KUFsOntD9cIY6q7Xl/MjDYeofjdRslq1LvxdKhM7HUcOFmfyHenGhXAtCq3E4ZeDn3zd35zWcSut8+hqNWoitzLBEpTNYsdIS/ATYzXYfoYaNFd+v8A8/nKCF77/R91yOiRt9dZ33P2LkGju8Ely4VqYbTcrBz9CVS+M1H4J3Iqyl8+VZnsPrnwMXkkN3RTI8YBdnBitm+1z/whbBltw0QvzsPPBwpR7HvcfOeGS5P1Q7GiM0EEp2seogpL/RhX0vFCXS451VTSzB4PM0Hj2fqE9WAeZn285Gwt+kyQfExin12NMfpUApCtxPRTJ+HP+aTRi8RhIjT3natE0rR0VrpDutGhc+eM9NphbXseDl1u+ncu3yrgOKXVhlsIC6Mcmw0ksWCyCl0M+yyXKXIL3UsflY+8ZU0ZsIM9OibLY2NnOW551WTJWy1fjyZKxSby7MnZghz9QSwMEFAAACAgAAAgh7IM0EQBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPWMzTQUVBKL0osyCgGihiCOKWZKSB2tJJZcqKlgYGxQaqZkYlZWmKyrkFqqlFSsolhsoGZRYq5qalSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7PDok5+FAgAAdwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7IM0EQBtAAAAeAAAAAkAJAAAAAAAAAAAAAAA0gIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAACKAwAAAAA=
       objectReference: {fileID: 0}
     - target: {fileID: 978740431043125305, guid: 71435d302a361ba4ba40da3ffa0dd82e,
         type: 3}

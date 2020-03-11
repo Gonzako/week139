@@ -16,14 +16,13 @@ TagManager:
   - Enemy
   - Obstacle
   - Player
-  - 
+  - Walls
   - 
   - 
   - 
   - Pickables
   - Throwables
   - Bullets
-
   - 
   - AISoundDetec
   - 
