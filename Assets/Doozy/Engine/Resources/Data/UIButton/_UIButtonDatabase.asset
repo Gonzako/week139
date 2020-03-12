@@ -17,6 +17,8 @@ MonoBehaviour:
   - Custom
   - Example
   - General
+  - StartGame
   Categories:
   - {fileID: 11400000, guid: 40f9e81ff80114a47a3721228ba749ed, type: 2}
   - {fileID: 11400000, guid: 313323b7311fcdf43a6009b9b5fcc365, type: 2}
+  - {fileID: 11400000, guid: dddb45af7bcc3f54a8e28cfacc44e74c, type: 2}
