@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 1225659439}
   - component: {fileID: 1225659438}
   m_Layer: 0
-  m_Name: UIButton-Start
+  m_Name: Button - GoTo1stLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,8 +743,8 @@ MonoBehaviour:
   StartScale: {x: 1, y: 1, z: 1}
   StartAlpha: 1
   AllowMultipleClicks: 0
-  ButtonCategory: General
-  ButtonName: Unnamed
+  ButtonCategory: StartGame
+  ButtonName: GoTo1stLevel
   ClickMode: 0
   DeselectButtonAfterClick: 0
   DisableButtonBetweenClicksInterval: 0.2
@@ -3146,7 +3146,7 @@ MonoBehaviour:
   StartAlpha: 1
   CanvasName: MasterCanvas
   CustomCanvasName: 0
-  DontDestroyCanvasOnLoad: 1
+  DontDestroyCanvasOnLoad: 0
 --- !u!114 &1356147354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,7 +3243,7 @@ GameObject:
   - component: {fileID: 1364982562}
   - component: {fileID: 1364982561}
   m_Layer: 0
-  m_Name: UIView
+  m_Name: View - MMplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3745,8 +3745,8 @@ MonoBehaviour:
   UpdateHideProgressorOnShow: 0
   UpdateShowProgressorOnHide: 0
   UseCustomStartAnchoredPosition: 1
-  ViewCategory: General
-  ViewName: Unnamed
+  ViewCategory: MainMenu
+  ViewName: MMplay
 --- !u!225 &1364982564
 CanvasGroup:
   m_ObjectHideFlags: 0
