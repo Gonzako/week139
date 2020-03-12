@@ -852,11 +852,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c58d0073d60cf8445a87c3a5d20c1419, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1073,6 +1073,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CameraGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165783640114279877, guid: 6c5491cb55c076e44aa9c1168da2b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.3458395
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165783640278274784, guid: 6c5491cb55c076e44aa9c1168da2b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.3458395
       objectReference: {fileID: 0}
     - target: {fileID: 7165783640278274785, guid: 6c5491cb55c076e44aa9c1168da2b43b,
         type: 3}
