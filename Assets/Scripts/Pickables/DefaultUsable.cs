@@ -9,7 +9,7 @@ public class DefaultUsable : MonoBehaviour, IBaseUsable
     public event Action<GameObject> onThisDeEquip;
     public event Action<GameObject> onThisUse;
     public event Action<GameObject> onThisThrow;
-
+    public int throwLayer = 16;
     public GameObject pickableGO;
     public GameObject throwGO;
 
@@ -42,6 +42,7 @@ public class DefaultUsable : MonoBehaviour, IBaseUsable
 
     public virtual void onThrow(Transform firePoint)
     {
+        throwGO.gameObject.layer = throwLayer;
         onThisThrow?.Invoke(this.gameObject);
         throwGO.transform.position = firePoint.position;
         throwGO.transform.rotation = firePoint.rotation;
